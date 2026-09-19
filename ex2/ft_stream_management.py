@@ -17,7 +17,8 @@ if __name__ == "__main__":
             print("---")
             print(f"File '{sys.argv[1]}' closed.")
         except OSError as err:
-            sys.stderr.write(f"[STDERR] Error opening file '{sys.argv[1]}': {err}\n")
+            sys.stderr.write(f"[STDERR] Error opening file "
+                             f"'{sys.argv[1]}': {err}\n")
         finally:
             if imputed_data is not None:
                 imputed_data.close()
@@ -41,7 +42,8 @@ if __name__ == "__main__":
                     replaced.write(rebuild)
                     print(f"Data saved in file '{to_replace}'.")
                 except OSError as err:
-                    sys.stderr.write(f"[STDERR] Error opening file '{to_replace}': {err}\n")
+                    sys.stderr.write(f"[STDERR] Error opening file "
+                                     f"'{to_replace}': {err}\n")
                 finally:
                     if replaced is not None:
                         replaced.close()
