@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 
-def secure_archive(data: str) -> tuple[bool, str]:
+def secure_archive(source_data: str) -> tuple[bool, str]:
     boolean = False
     result = ""
     try:
-        with open(data) as o_data:
+        with open(source_data) as o_data:
             result = o_data.read()
         boolean = True
     except OSError as err:
